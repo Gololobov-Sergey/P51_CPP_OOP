@@ -20,7 +20,7 @@ class Student
 
 public:
 	
-	Student(int g) : group(g), marks(0)
+	explicit Student(int g) : group(g), marks(0), name(nullptr)
 	{
 		cout << "Ctor" << endl;
 		age = 0;
@@ -28,12 +28,25 @@ public:
 		count++;
 	}
 
-	Student(const char* n, int a, int g) : group{g}, marks(0)
+	Student(const char* name, int a, int g) : group{g}, marks(0), name(nullptr)
 	{
 		cout << "Ctor 2" << endl;
 		setAge(a);
-		setName(n);
+		setName(name);
 		count++;
+	}
+
+	Student(const Student& obj): group(obj.group), marks(obj.marks), name(nullptr)
+	{
+		count++;
+		setName(obj.name);
+		age = obj.age;
+	}
+
+	~Student()
+	{
+		count--;
+		delete name;
 	}
 
 	static int getCount()
@@ -55,12 +68,12 @@ public:
 		age = a;
 	}
 
-	void setName(const char* n)
+	void setName(const char* name)
 	{
-		if (name)
-			delete name;
-		name = new char[strlen(n) + 1];
-		strcpy_s(name, strlen(n) + 1, n);
+		if (this->name)
+			delete this->name;
+		this->name = new char[strlen(name) + 1];
+		strcpy_s(this->name, strlen(name) + 1, name);
 	}
 
 	int getAge()
@@ -78,6 +91,7 @@ public:
 		cout << "Name   : " << name << endl;
 		cout << "Age    : " << age << endl;
 		cout << "Group  : " << group << endl;
+		cout << "Marks  : "; marks.print();
 	}
 
 	void addMark(int mark)

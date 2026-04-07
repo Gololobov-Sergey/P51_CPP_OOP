@@ -4,24 +4,56 @@
 #include"Array.h"
 
 
+void printArray(Array a)
+{
+	a.print();
+}
+
+void printStudent(Student s)
+{
+	s.show();
+}
+
+
 using namespace std;
 
 int main()
 {
 
-	Student st("Vasya", 15, 51);
-	st.addMark(10);
-	st.addMark(12);
-	st.addMark(955);
 
-	{
-		Array a(10);
-		a.set(100, 200);
-		a.print();
-		a.push(99);
-		a.print();
-		a.sort();
-	}
+	// 07.04.2026
+
+
+
+	Array a(10);
+	a.set();
+	printArray(a);
+	a.print();
+
+	//Array b(a);
+
+
+	Student st("Vasya", 15, 51);
+	st.addMark(10);  
+	st.addMark(10);
+	st.addMark(10);
+	st.show(); // show(st);
+	printStudent(st);
+	st.show();
+
+	//Student st("Vasya", 15, 51);
+	//st.addMark(10);
+	//st.addMark(12);
+	//st.addMark(955);
+
+	//{
+	//	Array a(10);
+	//	a.set(100, 200);
+	//	a.print();
+	//	a.push(99);
+	//	a.print();
+	//	a.sort();
+	//}
 
 
 	//int a = 10;
@@ -52,3 +84,5 @@ int main()
 	//st->show();
 	//cout << Student::getCount() << endl;
 }
+
+

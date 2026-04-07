@@ -6,9 +6,11 @@ class Array
 	size_t size;
 
 public:
-	Array(size_t s);
+	explicit Array(size_t size);
 
 	~Array();
+
+	Array(const Array& obj);
 
 	void set(int minValue = 0, int maxValue = 9);
 

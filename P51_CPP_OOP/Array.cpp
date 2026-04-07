@@ -3,9 +3,10 @@
 
 using namespace std;
 
-Array::Array(size_t s)
+Array::Array(size_t size)
 {
-	size = s;
+	cout << "Constructor Array" << endl;
+	this->size = size;
 	arr = new int[size];
 }
 
@@ -13,6 +14,17 @@ Array::~Array()
 {
 	cout << "Destructor Array" << endl;
 	delete[] arr;
+}
+
+Array::Array(const Array& obj)
+{
+	cout << "Constructor Copy Array" << endl;
+	size = obj.size;
+	arr = new int[size];
+	for (size_t i = 0; i < size; i++)
+	{
+		arr[i] = obj.arr[i];
+	}
 }
 
 void Array::set(int minValue, int maxValue)
