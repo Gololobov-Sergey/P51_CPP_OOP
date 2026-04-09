@@ -131,7 +131,7 @@ void Apartment::print()
 	cout << "Number #" << number << endl;
 	for (size_t i = 0; i < residentCount; i++)
 	{
-		cout << "\t" << i + 1 << ". ";
+		cout << "  " << i + 1 << ". ";
 		residents[i].print();
 	}
 	cout << endl;

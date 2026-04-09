@@ -22,10 +22,11 @@ int main()
 {
 
 	// 09.04.2026
+	//House house(10);
 
 	Apartment ap(1);
-	ap.addResident();
-	ap.addResident();
+	ap.addResident(Human("Serg", true));
+	ap.addResident(Human("Anna", false));
 	ap.print();
 
 
@@ -44,7 +45,10 @@ int main()
 	//Array b(a);
 	//Array c = a;
 	//Array d(10);
-	//d = a;
+	// 
+	// 
+	// 
+	//d = a = c;
 
 
 
