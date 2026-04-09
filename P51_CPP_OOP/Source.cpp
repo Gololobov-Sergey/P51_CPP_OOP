@@ -2,6 +2,7 @@
 
 #include"Student.h"
 #include"Array.h"
+#include"House.h"
 
 
 void printArray(Array a)
@@ -20,26 +21,40 @@ using namespace std;
 int main()
 {
 
+	// 09.04.2026
+
+	Apartment ap(1);
+	ap.addResident();
+	ap.addResident();
+	ap.print();
+
 
 	// 07.04.2026
 
+	//Array a(5);
+	//Array b(15);
+	//a = a;
 
 
-	Array a(10);
-	a.set();
-	printArray(a);
-	a.print();
+	//Array a(5);
+	//a.set();
+	//printArray(a);
+	//a.print();
 
 	//Array b(a);
+	//Array c = a;
+	//Array d(10);
+	//d = a;
 
 
-	Student st("Vasya", 15, 51);
-	st.addMark(10);  
-	st.addMark(10);
-	st.addMark(10);
-	st.show(); // show(st);
-	printStudent(st);
-	st.show();
+
+	//Student st("Vasya", 15, 51);
+	//st.addMark(10);  
+	//st.addMark(10);
+	//st.addMark(10);
+	//st.show(); // show(st);
+	//printStudent(st);
+	//st.show();
 
 	//Student st("Vasya", 15, 51);
 	//st.addMark(10);
