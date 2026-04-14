@@ -27,7 +27,7 @@ Array::Array(const Array& obj)
 	}
 }
 
-void Array::set(int minValue, int maxValue)
+void Array::set(int minValue, int maxValue) const
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -35,7 +35,7 @@ void Array::set(int minValue, int maxValue)
 	}
 }
 
-void Array::print()
+void Array::print() const
 {
 	for (size_t i = 0; i < size; i++)
 	{
@@ -58,7 +58,9 @@ void Array::push(int value)
 }
 
 void Array::insert(size_t index, int value)
-{}
+{
+
+}
 
 void Array::pop()
 {
@@ -68,25 +70,27 @@ void Array::pop()
 void Array::remove(size_t index)
 {}
 
-int Array::getMaxValue()
+int Array::getMaxValue()const
 {
 	return 0;
 }
 
-int Array::getMixValue()
+int Array::getMixValue()const
 {
 	return 0;
 }
 
-int Array::getAvg()
+int Array::getAvg()const
 {
 	return 0;
 }
 
-void Array::sort()
-{}
+void Array::sort() const
+{
 
-void Array::setValue(size_t index, int value)
+}
+
+void Array::setValue(size_t index, int value) const
 {
 	arr[index] = value;
 }

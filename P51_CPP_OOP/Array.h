@@ -12,9 +12,9 @@ public:
 
 	Array(const Array& obj);
 
-	void set(int minValue = 0, int maxValue = 9);
+	void set(int minValue = 0, int maxValue = 9) const;
 
-	void print();
+	void print() const;
 
 	void push(int value);
 
@@ -24,14 +24,14 @@ public:
 
 	void remove(size_t index);
 
-	int getMaxValue();
+	int getMaxValue() const;
 	
-	int getMixValue();
+	int getMixValue() const;
 	
-	int getAvg();
+	int getAvg() const;
 
-	void sort();
+	void sort() const;
 
-	void setValue(size_t index, int value);
+	void setValue(size_t index, int value) const;
 };
 

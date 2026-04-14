@@ -76,17 +76,17 @@ public:
 		strcpy_s(this->name, strlen(name) + 1, name);
 	}
 
-	int getAge()
+	int getAge() const
 	{
 		return age;
 	}
 
-	const char* getName()
+	const char* getName() const
 	{
 		return name;
 	}
 
-	void show()
+	void show() const
 	{
 		cout << "Name   : " << name << endl;
 		cout << "Age    : " << age << endl;
