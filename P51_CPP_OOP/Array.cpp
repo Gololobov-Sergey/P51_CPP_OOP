@@ -1,4 +1,5 @@
 #include <iostream>
+#include<cassert>
 #include "Array.h"
 
 using namespace std;
@@ -93,4 +94,10 @@ void Array::sort() const
 void Array::setValue(size_t index, int value) const
 {
 	arr[index] = value;
+}
+
+int& Array::operator[](int index)
+{
+	assert(index >= 0 && index < size);
+	return arr[index];
 }

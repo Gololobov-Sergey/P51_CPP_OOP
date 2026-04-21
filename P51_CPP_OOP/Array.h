@@ -33,5 +33,7 @@ public:
 	void sort() const;
 
 	void setValue(size_t index, int value) const;
+
+	int& operator[](int index);
 };
 

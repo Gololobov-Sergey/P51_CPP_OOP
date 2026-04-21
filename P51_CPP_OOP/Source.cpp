@@ -6,6 +6,7 @@
 #include"House.h"
 #include"Point.h"
 #include"Fraction.h"
+#include"String.h"
 
 
 void printArray(Array a)
@@ -18,18 +19,58 @@ void printStudent(Student s)
 	s.show();
 }
 
+void fff(String s)
+{
+
+}
+
 
 using namespace std;
 
 int main()
 {
 
+	// 21.04.2026
+
+	//Point p(3, 4);
+	//p(1, 2);
+	//p.print();
+
+	Array a(10);
+	a.set(100, 200);
+	a.print();
+	a.setValue(1, 999);
+	a[1] = 999;
+	cout << a[3] << endl;
+	a.print();
+	//a["one"] = 555;
+
+	String s1;
+	String s2("mama");
+	String s3("papa");
+
+	s3 = "papa";
+
+	cin >> s3;
+	cout << s3 << endl;
+
+	String s4 = s2 + s3;
+
+	s2 += s3;
+
+	if (s2 == s3)
+	{
+
+	}
+	
+
 	// 14.04.2026
 
-	Fraction f;
-	Fraction f1(3);
-	Fraction f2(1,2);
-	Fraction f3(1,1,3);
+	//Fraction f;
+	//Fraction f1(3);
+	//Fraction f2(1,2);
+	//Fraction f3(-1,1,-3);
+
 
 
 
