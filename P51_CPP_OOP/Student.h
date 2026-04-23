@@ -12,7 +12,7 @@ class Student
 	int age;
 	char* name;
 
-	Array marks;
+	Array<int> marks;
 
 	static int count;
 
@@ -20,6 +20,11 @@ class Student
 
 public:
 	
+	Student(): Student("no name", 0, 0)
+	{
+
+	}
+
 	explicit Student(int g) : group(g), marks(0), name(nullptr)
 	{
 		cout << "Ctor" << endl;
@@ -47,6 +52,11 @@ public:
 	{
 		count--;
 		delete name;
+	}
+
+	Student& operator=(const Student& obj)
+	{
+		return *this;
 	}
 
 	static int getCount()
@@ -107,3 +117,14 @@ public:
 
 
 int Student::count = 0;
+
+
+template<>
+void Array<Student>::print() const
+{
+	for (size_t i = 0; i < size; i++)
+	{
+		arr[i].show();
+	}
+	cout << endl;
+}

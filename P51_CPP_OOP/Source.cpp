@@ -9,7 +9,7 @@
 #include"String.h"
 
 
-void printArray(Array a)
+void printArray(Array<int> a)
 {
 	a.print();
 }
@@ -36,32 +36,37 @@ int main()
 	//p(1, 2);
 	//p.print();
 
-	Array a(10);
-	a.set(100, 200);
-	a.print();
-	a.setValue(1, 999);
-	a[1] = 999;
-	cout << a[3] << endl;
-	a.print();
+	//Array<int> a(10);
+	//a.set(100, 200);
+	//a.print();
+	//a.setValue(1, 999);
+	//a[1] = 999;
+	//cout << a[3] << endl;
+	//a.print();
+
+	Array<Student> s(5);
+	s.set();
+	s.print();
+
 	//a["one"] = 555;
 
-	String s1;
-	String s2("mama");
-	String s3("papa");
+	//String s1;
+	//String s2("mama");
+	//String s3("papa");
 
-	s3 = "papa";
+	//s3 = "papa";
 
-	cin >> s3;
-	cout << s3 << endl;
+	//cin >> s3;
+	//cout << s3 << endl;
 
-	String s4 = s2 + s3;
+	//String s4 = s2 + s3;
 
-	s2 += s3;
+	//s2 += s3;
 
-	if (s2 == s3)
-	{
+	//if (s2 == s3)
+	//{
 
-	}
+	//}
 	
 
 	// 14.04.2026
