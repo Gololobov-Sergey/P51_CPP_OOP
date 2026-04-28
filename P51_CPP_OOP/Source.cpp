@@ -7,6 +7,7 @@
 #include"Point.h"
 #include"Fraction.h"
 #include"String.h"
+#include"var.h"
 
 
 void printArray(Array<int> a)
@@ -24,11 +25,51 @@ void fff(String s)
 
 }
 
+enum class Color
+{
+	BLACK, RED = 9, BLUE
+};
+
+enum class Animal
+{
+	CAT, DOG, FISH
+};
+
+
 
 using namespace std;
 
 int main()
 {
+
+	// 28.04.2026
+
+	//var b = 111;
+	//var a = 2.5;
+	//var s = "mama";
+
+	//a.print();
+
+	//char* st = new char[5] {"mama"};
+	//char* m = new char[len * i + 1];
+	//for (size_t i = 0; i < i; i++)
+	//{
+	//	for (size_t j = 0; j < len; j++)
+	//	{
+	//		m[len * i + j] = st[j];
+	//	}
+	//}
+	//m[len * i] = '\0';
+	//cout << m << endl;
+
+
+
+	//Color color = Color::BLACK;
+	//if (color == Animal::CAT)
+	//{
+
+	//}
+
 
 	// 21.04.2026
 
@@ -44,9 +85,9 @@ int main()
 	//cout << a[3] << endl;
 	//a.print();
 
-	Array<Student> s(5);
-	s.set();
-	s.print();
+	//Array<Student> s(5);
+	//s.set();
+	//s.print();
 
 	//a["one"] = 555;
 
