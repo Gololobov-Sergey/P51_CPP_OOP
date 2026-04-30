@@ -9,6 +9,8 @@
 #include"String.h"
 #include"var.h"
 
+#include"Stack.h"
+
 
 void printArray(Array<int> a)
 {
@@ -42,11 +44,40 @@ using namespace std;
 int main()
 {
 
+	// 30.04.2026
+
+	Stack<int, 10> s;
+	s.push(3);
+	s.push(4);
+	s.push(2);
+	s.push(5);
+	s.print();
+
+	//s.pop();
+	//s.print();
+
+	//cout << s.peek() << endl;
+	//cout << s.size() << endl;
+	//cout << s.isEmpty() << endl;
+
+	Stack<int, 10> s1 = s;
+	s1.print();
+
+	s.clear();
+	s1.clear();
+
+
+	Stack<char, 100> brekets;
+
+
+
+
 	// 28.04.2026
 
 	//var b = 111;
 	//var a = 2.5;
 	//var s = "mama";
+	//var t = a + s;
 
 	//a.print();
 
